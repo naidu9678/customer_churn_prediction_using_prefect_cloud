@@ -5,18 +5,19 @@
 [![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.0+-orange.svg)](https://scikit-learn.org)
 
 ## 📋 Table of Contents
-- [Project Overview](#project-overview)
-- [Business Problem](#business-problem)
-- [Dataset](#dataset)
-- [Architecture](#architecture)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [API Documentation](#api-documentation)
-- [Project Structure](#project-structure)
-- [Workflow Details](#workflow-details)
-- [Results](#results)
-- [Contributing](#contributing)
+- [Project Overview](#-project-overview)
+- [Business Problem](#-business-problem)
+- [Dataset](#-dataset)
+- [Architecture](#️-architecture)
+- [Features](#-features)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Project Structure](#-project-structure)
+- [Workflow Details](#-workflow-details)
+- [Results](#-results)
+- [Configuration](#-configuration)
+- [Future Enhancements](#-future-enhancements)
+- [Contributing](#-contributing)
 
 ## 🎯 Project Overview
 
