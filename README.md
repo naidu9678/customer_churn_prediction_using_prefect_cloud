@@ -63,7 +63,7 @@ This project implements a comprehensive **Customer Churn Prediction** system usi
 
 ```mermaid
 graph TB
-    A[Data Source] --> B[Prefect Workflow]
+    A[Prefect Workflow] --> B[Dataset]
     B --> C[Data Preprocessing]
     C --> D[EDA & Visualization]
     D --> E[Model Training]
@@ -72,8 +72,8 @@ graph TB
     G --> H[API Endpoints]
     H --> I[Monitoring Dashboard]
     
-    B --> J[Automated Scheduling]
-    J --> B
+    A --> J[Automated Scheduling]
+    J --> A
 ```
 
 ## ✨ Features
