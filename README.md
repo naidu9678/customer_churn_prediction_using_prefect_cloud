@@ -61,19 +61,38 @@ This project implements a comprehensive **Customer Churn Prediction** system usi
 
 ## 🏗️ Architecture
 
+The entire customer churn prediction pipeline is orchestrated and executed within **Prefect Cloud**, providing a comprehensive MLOps solution with automated scheduling, monitoring, and artifact management.
+
 ```mermaid
 graph TB
-    A[Prefect Workflow] --> B[Dataset]
-    B --> C[Data Preprocessing]
-    C --> D[EDA & Visualization]
-    D --> E[Model Training]
-    E --> F[Model Evaluation]
-    F --> G[Prefect Cloud Storage]
-    G --> H[API Endpoints]
-    H --> I[Monitoring Dashboard]
+    subgraph "Prefect Cloud Environment"
+        A[Prefect Workflow Orchestrator] --> B[Dataset Loading]
+        B --> C[Data Preprocessing]
+        C --> D[EDA & Visualization]
+        D --> E[Model Training]
+        E --> F[Model Evaluation]
+        F --> G[Artifact Storage]
+        G --> H[Flow Monitoring]
+        
+        A --> I[Automated Scheduling]
+        I --> A
+        
+        J[Prefect Cloud APIs] --> K[External Access]
+        K --> L[Monitoring Dashboard]
+        
+        G --> J
+        H --> J
+    end
     
-    A --> J[Automated Scheduling]
-    J --> A
+    subgraph "External Systems"
+        M[Local Dataset] --> B
+        N[Generated Reports] --> G
+        O[Model Artifacts] --> G
+    end
+    
+    M -.-> B
+    N -.-> G
+    O -.-> G
 ```
 
 ## ✨ Features
